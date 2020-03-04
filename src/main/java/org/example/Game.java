@@ -1,7 +1,7 @@
 package org.example;
 
 public class Game {
-    Rescuer name;
+    Rescuer rescuerName;
     Animal animal;
     Vet vet;
 }

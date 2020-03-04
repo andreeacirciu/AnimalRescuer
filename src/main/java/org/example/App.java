@@ -15,15 +15,14 @@ public class App
 
         //first animal
         Animal firstAnimal = new Animal();
-        firstAnimal.type = "dog";
         firstAnimal.name = "Rex";
         firstAnimal.age = 2;
-        firstAnimal.hungerLvl = 5;
-        firstAnimal.healthLvl =10;
-        firstAnimal.happinessLvl = 7;
+        firstAnimal.hungerLevel = 5;
+        firstAnimal.healthLevel =10;
+        firstAnimal.happinessLevel = 7;
         firstAnimal.color = "grey";
         firstAnimal.gender ="female";
-        firstAnimal.cleanLvl = 9;
+        firstAnimal.cleanLevel = 9;
 
         //first type of food
         AnimalFood food1 = new AnimalFood();
@@ -80,7 +79,7 @@ public class App
 
         //first game
         Game game1 = new Game();
-        game1.name = rescuer1;
+        game1.rescuerName = rescuer1;
         game1.animal = firstAnimal;
         game1.vet = doctor1;
 
