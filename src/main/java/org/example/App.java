@@ -15,32 +15,32 @@ public class App
         System.out.println( "Welcome to Animal Rescuer!" );
 
         //first dog
-        Dog dog1 = new Dog("Rex");
-        dog1.setAge(2);
+        Dog dog1 = new Dog("dog", "Rex", 1, "brown", "male");
         dog1.setHungerLevel(5);
         dog1.setHealthLevel(10);
         dog1.setHappinessLevel(7);
-        dog1.setColor("grey");
-        dog1.setGender("male");
         dog1.setCleanLevel(9);
+        dog1.setBite(false);
 
         //first cat
-        Cat cat1 =new Cat("Tom");
-        cat1.setAge(1);
+        Cat cat1 =new Cat("cat", "Cindy", 1, "pink", "female");
         cat1.setHungerLevel(7);
         cat1.setHealthLevel(9);
         cat1.setHappinessLevel(8);
-        cat1.setColor("pink");
-        cat1.setGender("female");
         cat1.setCleanLevel(8);
-
+        cat1.setPurr(true);
 
         //first type of food for dogs
-        DogFood dogFood1 = new DogFood("Royal Canin");
-        dogFood1.availability = 4;
-        dogFood1.price = 10;
-        dogFood1.quantity = 85;
-        dogFood1.setFoodType("Dry");
+        AnimalFood dogFood1 = new AnimalFood("Royal Canin", "dry");
+        dogFood1.setAvailability(4);
+        dogFood1.setPrice(10);
+        dogFood1.setQuantity(85);
+
+        //second type of food for dogs
+        AnimalFood dogFood2 = new AnimalFood("Happy Dog", "dry");
+        dogFood1.setAvailability(2);
+        dogFood1.setPrice(6);
+        dogFood1.setQuantity(100);
 
         //current date
         Date currentDate = new Date();
@@ -52,7 +52,7 @@ public class App
         Date date = sdf.parse(dateInString);
         System.out.println("Expiration Date:" + date);
 
-        dogFood1.expirationDate = date;
+        dogFood1.setExpirationDate(date);
 
         //warning if food is expired
         if (currentDate.after(date)) {
@@ -64,12 +64,12 @@ public class App
 
         //first rescuer
         Rescuer rescuer1 = new Rescuer("John ");
-        rescuer1.money = 150; //coins
-        rescuer1.gender = "female";
+        rescuer1.setMoney(150);
+        rescuer1.setGender("male");
 
         //apelare metoda feeding
-        rescuer1.feeding(dog1, dogFood1);
-        System.out.println("The hunger level of " + dog1.getName() + " is: " + dog1.getHungerLevel());
+        rescuer1.feeding(dog1, dogFood2);
+        System.out.println("The hunger level of " + dog1.getAnimalName() + " is: " + dog1.getHungerLevel());
 
         //a recreational activity
         RecreationalActivities activity1 = new RecreationalActivities( "Hide and seek");
@@ -83,13 +83,13 @@ public class App
 
         //apelare metoda entertain
         rescuer1.entertain(dog1, activity1);
-        System.out.println("The happiness level of " + dog1.getName() + " is: " + dog1.getHappinessLevel());
+        System.out.println("The happiness level of " + dog1.getAnimalName() + " is: " + dog1.getHappinessLevel());
 
 
         //first doctor
         Vet doctor1 = new Vet("Mr. Smith");
-        doctor1.specialization = "dogs"; //???
-        doctor1.gender = "male";
+        doctor1.setSpecialization("dogs");
+        doctor1.setGender("male");
 
 
         //first game

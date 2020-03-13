@@ -1,12 +1,29 @@
 package org.example;
 
 public class RecreationalActivities {
-    public RecreationalActivities(String name) {
-        this.name = name;
+    private String activityName;
+    private ToolsForActivities toolsForActivities;
+
+
+    public RecreationalActivities(String activityName) {
+        this.activityName = activityName;
     }
 
-    String name;
+    public String getActivityName() {
+        return activityName;
+    }
 
-    ToolsForActivities toolsForActivities;
+    public void setActivityName(String activityName) {
+        this.activityName = activityName;
+    }
+
+    public ToolsForActivities getToolsForActivities() {
+        return toolsForActivities;
+    }
+
+    public void setToolsForActivities(ToolsForActivities toolsForActivities) {
+        this.toolsForActivities = toolsForActivities;
+    }
+
 
 }

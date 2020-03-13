@@ -1,19 +1,20 @@
 package org.example;
 
 public class Cat extends Animal {
-    //constructor
-    public Cat(String name) {
-        this.name = name;
+    private boolean purr;
+
+    public Cat(String animalType, String animalName, int age, String color, String gender) {
+        super(animalType, animalName, age, color, gender);
     }
 
-    private String name;
-
-
-    public String getName() {
-        return name;
+    public boolean isPurr() {
+        return purr;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPurr(boolean purr) {
+        this.purr = purr;
     }
+
+
+
 }
