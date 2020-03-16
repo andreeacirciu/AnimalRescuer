@@ -37,7 +37,7 @@ public class App
         dogFood1.setQuantity(85);
 
         //second type of food for dogs
-        AnimalFood dogFood2 = new AnimalFood("Happy Dog", "dry");
+        AnimalFood dogFood2 = new AnimalFood("Happy dog", "dry");
         dogFood1.setAvailability(2);
         dogFood1.setPrice(6);
         dogFood1.setQuantity(100);
@@ -60,7 +60,7 @@ public class App
         }
 
         //favorite food for the first animal
-        dog1.setFavoriteFood(dogFood1);
+        dog1.setFavoriteFood(dogFood1.getFoodName());
 
         //first rescuer
         Rescuer rescuer1 = new Rescuer("John ");
@@ -68,7 +68,7 @@ public class App
         rescuer1.setGender("male");
 
         //apelare metoda feeding
-        rescuer1.feeding(dog1, dogFood2);
+        rescuer1.feeding(dog1, dogFood1);
         System.out.println("The hunger level of " + dog1.getAnimalName() + " is: " + dog1.getHungerLevel());
 
         //a recreational activity
@@ -79,7 +79,7 @@ public class App
         //activity2.toolsForActivities.leash = true;
 
         //favorite activity for the first animal
-        dog1.setFavoriteActivity(activity1);
+        dog1.setFavoriteActivity(activity1.getActivityName());
 
         //apelare metoda entertain
         rescuer1.entertain(dog1, activity1);

@@ -33,9 +33,4 @@ public class Vet {
     public void setGender(String gender) {
         this.gender = gender;
     }
-
-
-
-
-
 }

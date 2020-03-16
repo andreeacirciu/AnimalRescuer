@@ -5,13 +5,31 @@ public class Animal {
     private String animalName;
     private int age;
     private int healthLevel;
-    public int hungerLevel;
-    public int happinessLevel;
+    private int hungerLevel;
+    private int happinessLevel;
     private int cleanLevel;
     private String color;
     private String gender;
-    private AnimalFood favoriteFood;
-    private RecreationalActivities favoriteActivity;
+
+    public String getFavoriteActivity() {
+        return favoriteActivity;
+    }
+
+    public void setFavoriteActivity(String favoriteActivity) {
+        this.favoriteActivity = favoriteActivity;
+    }
+
+    private String favoriteFood; //string
+
+    public String getFavoriteFood() {
+        return favoriteFood;
+    }
+
+    public void setFavoriteFood(String favoriteFood) {
+        this.favoriteFood = favoriteFood;
+    }
+
+    private String favoriteActivity;
 
     public Animal(String animalType, String animalName, int age, String color, String gender) {
         this.animalType = animalType;
@@ -77,21 +95,6 @@ public class Animal {
         this.cleanLevel = cleanLevel;
     }
 
-    public AnimalFood getFavoriteFood() {
-        return favoriteFood;
-    }
-
-    public void setFavoriteFood(AnimalFood favoriteFood) {
-        this.favoriteFood = favoriteFood;
-    }
-
-    public RecreationalActivities getFavoriteActivity() {
-        return favoriteActivity;
-    }
-
-    public void setFavoriteActivity(RecreationalActivities favoriteActivity) {
-        this.favoriteActivity = favoriteActivity;
-    }
 
     public String getColor() {
         return color;
