@@ -94,9 +94,9 @@ public class App
 
         //first game
         Game game1 = new Game();
-        game1.rescuerName = rescuer1;
-        game1.animal = dog1;
-        game1.vet = doctor1;
+        game1.setRescuerName(rescuer1);
+        game1.setAnimal(dog1);
+        game1.setVet(doctor1);
 
 
         }
