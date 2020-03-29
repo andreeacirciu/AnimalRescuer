@@ -7,6 +7,17 @@ public class Cat extends Animal {
         super(animalType, animalName, age, color, gender);
     }
 
+    @Override
+    public void animalMood(){
+        if(getHappinessLevel()>=8 ){
+            System.out.println("The cat is very happy and purr!");
+        }else if(getHappinessLevel() >= 6 && getHappinessLevel()<8){
+            System.out.println("The cat is happy!");
+        }else if(getHappinessLevel()<=5) {
+            System.out.println("The cat is sad!");
+        }
+    }
+
     public boolean isPurr() {
         return purr;
     }

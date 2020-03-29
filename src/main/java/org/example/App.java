@@ -26,7 +26,7 @@ public class App
         Cat cat1 =new Cat("cat", "Cindy", 1, "pink", "female");
         cat1.setHungerLevel(7);
         cat1.setHealthLevel(9);
-        cat1.setHappinessLevel(8);
+        cat1.setHappinessLevel(5);
         cat1.setCleanLevel(8);
         cat1.setPurr(true);
 
@@ -71,6 +71,9 @@ public class App
         rescuer1.feeding(dog1, dogFood1);
         System.out.println("The hunger level of " + dog1.getAnimalName() + " is: " + dog1.getHungerLevel());
 
+        //////////apelare metoda animalMood
+        dog1.animalMood();
+        cat1.animalMood();
         //a recreational activity
         RecreationalActivities activity1 = new RecreationalActivities( "Hide and seek");
 

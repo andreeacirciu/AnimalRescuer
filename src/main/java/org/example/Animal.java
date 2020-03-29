@@ -10,25 +10,7 @@ public class Animal {
     private int cleanLevel;
     private String color;
     private String gender;
-
-    public String getFavoriteActivity() {
-        return favoriteActivity;
-    }
-
-    public void setFavoriteActivity(String favoriteActivity) {
-        this.favoriteActivity = favoriteActivity;
-    }
-
     private String favoriteFood; //string
-
-    public String getFavoriteFood() {
-        return favoriteFood;
-    }
-
-    public void setFavoriteFood(String favoriteFood) {
-        this.favoriteFood = favoriteFood;
-    }
-
     private String favoriteActivity;
 
     public Animal(String animalType, String animalName, int age, String color, String gender) {
@@ -39,7 +21,34 @@ public class Animal {
         this.gender = gender;
     }
 
+public void animalMood(){
+        if(getHappinessLevel()>=8 ){
+            System.out.println("The animal is very happy!");
+        }else if(getHappinessLevel() >= 6 && getHappinessLevel()<8){
+            System.out.println("The animal is happy!");
+        }else if(getHappinessLevel()<=5) {
+            System.out.println("The animal is sad!");
+        }
+}
+
+
     //setterii si getterii
+    public String getFavoriteActivity() {
+        return favoriteActivity;
+    }
+
+    public void setFavoriteActivity(String favoriteActivity) {
+        this.favoriteActivity = favoriteActivity;
+    }
+
+    public String getFavoriteFood() {
+        return favoriteFood;
+    }
+
+    public void setFavoriteFood(String favoriteFood) {
+        this.favoriteFood = favoriteFood;
+    }
+
     public String getAnimalType() {
         return animalType;
     }

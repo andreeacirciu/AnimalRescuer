@@ -7,6 +7,16 @@ public class Dog extends Animal {
           super(animalType, animalName, age, color, gender);
      }
 
+     @Override
+     public void animalMood() {
+          if(getHappinessLevel()>=8 ){
+               System.out.println("The dog is very happy!");
+          }else if(getHappinessLevel() >= 6 && getHappinessLevel()<8){
+               System.out.println("The dog is happy!");
+          }else if(getHappinessLevel()<=5) {
+               System.out.println("The dog is sad and starts to bite!");
+          }
+     }
 
      public boolean isBite() {
           return bite;
