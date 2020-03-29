@@ -15,20 +15,20 @@ public class App
         System.out.println( "Welcome to Animal Rescuer!" );
 
         //first dog
-        Dog dog1 = new Dog("dog", "Rex", 1, "brown", "male");
+        Animal dog1 = new Dog("dog", "Rex", 1, "brown", "male");
         dog1.setHungerLevel(5);
         dog1.setHealthLevel(10);
         dog1.setHappinessLevel(7);
         dog1.setCleanLevel(9);
-        dog1.setBite(false);
+        ((Dog) dog1).setBite(false);
 
         //first cat
-        Cat cat1 =new Cat("cat", "Cindy", 1, "pink", "female");
+        Animal cat1 =new Cat("cat", "Cindy", 1, "pink", "female");
         cat1.setHungerLevel(7);
         cat1.setHealthLevel(9);
         cat1.setHappinessLevel(5);
         cat1.setCleanLevel(8);
-        cat1.setPurr(true);
+        ((Cat) cat1).setPurr(true);
 
         //first type of food for dogs
         AnimalFood dogFood1 = new AnimalFood("Royal Canin", "dry");
@@ -68,12 +68,10 @@ public class App
         rescuer1.setGender("male");
 
         //apelare metoda feeding
-        rescuer1.feeding(dog1, dogFood1);
+        rescuer1.feeding((Dog) dog1, dogFood1);
         System.out.println("The hunger level of " + dog1.getAnimalName() + " is: " + dog1.getHungerLevel());
 
-        //////////apelare metoda animalMood
-        dog1.animalMood();
-        cat1.animalMood();
+
         //a recreational activity
         RecreationalActivities activity1 = new RecreationalActivities( "Hide and seek");
 
@@ -85,9 +83,12 @@ public class App
         dog1.setFavoriteActivity(activity1.getActivityName());
 
         //apelare metoda entertain
-        rescuer1.entertain(dog1, activity1);
+        rescuer1.entertain((Dog) dog1, activity1);
         System.out.println("The happiness level of " + dog1.getAnimalName() + " is: " + dog1.getHappinessLevel());
 
+        //////////apelare metoda animalMood
+        dog1.animalMood();
+        cat1.animalMood();
 
         //first doctor
         Vet doctor1 = new Vet("Mr. Smith");
