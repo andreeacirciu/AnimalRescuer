@@ -6,7 +6,6 @@ public class AnimalFood {
 
     private String foodName;
     private String foodType; //wet or dry
-    //   private String forWho;
     private int price;
     private int quantity; // grams
     private Date expirationDate;

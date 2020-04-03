@@ -14,6 +14,10 @@ public class App
     public static void main( String[] args ) throws ParseException {
         System.out.println( "Welcome to Animal Rescuer!" );
 
+
+        Game game = new Game();
+        game.start();
+
         //first dog
         Animal dog1 = new Dog("dog", "Rex", 1, "brown", "male");
         dog1.setHungerLevel(5);
@@ -30,65 +34,32 @@ public class App
         cat1.setCleanLevel(8);
         ((Cat) cat1).setPurr(true);
 
-        //first type of food for dogs
-        AnimalFood dogFood1 = new AnimalFood("Royal Canin", "dry");
-        dogFood1.setAvailability(4);
-        dogFood1.setPrice(10);
-        dogFood1.setQuantity(85);
 
-        //second type of food for dogs
-        AnimalFood dogFood2 = new AnimalFood("Happy dog", "dry");
-        dogFood1.setAvailability(2);
-        dogFood1.setPrice(6);
-        dogFood1.setQuantity(100);
-
-        //current date
-        Date currentDate = new Date();
-        System.out.println("Current Date: " + currentDate);
-
-        //Expiration date for dogFood1
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy");
-        String dateInString = "22-05-2020";
-        Date date = sdf.parse(dateInString);
-        System.out.println("Expiration Date:" + date);
-
-        dogFood1.setExpirationDate(date);
-
-        //warning if food is expired
-        if (currentDate.after(date)) {
-            System.out.println("Food expired!!!");
-        }
-
-        //favorite food for the first animal
-        dog1.setFavoriteFood(dogFood1.getFoodName());
+//
+//        //favorite food for the first animal
+//        dog1.setFavoriteFood(dogFood1.getFoodName());
 
         //first rescuer
         Rescuer rescuer1 = new Rescuer("John ");
         rescuer1.setMoney(150);
         rescuer1.setGender("male");
 
-        //apelare metoda feeding
-        rescuer1.feeding((Dog) dog1, dogFood1);
-        System.out.println("The hunger level of " + dog1.getAnimalName() + " is: " + dog1.getHungerLevel());
+//        //apelare metoda feeding
+//        rescuer1.feeding((Dog) dog1, dogFood1);
+//        System.out.println("The hunger level of " + dog1.getAnimalName() + " is: " + dog1.getHungerLevel());
 
 
-        //a recreational activity
-        RecreationalActivities activity1 = new RecreationalActivities( "Hide and seek");
 
-        //another activity
-        RecreationalActivities activity2 = new RecreationalActivities("Walking");
-        //activity2.toolsForActivities.leash = true;
-
-        //favorite activity for the first animal
-        dog1.setFavoriteActivity(activity1.getActivityName());
-
-        //apelare metoda entertain
-        rescuer1.entertain((Dog) dog1, activity1);
-        System.out.println("The happiness level of " + dog1.getAnimalName() + " is: " + dog1.getHappinessLevel());
+//        //favorite activity for the first animal
+//        dog1.setFavoriteActivity(activity1.getActivityName());
+//
+//        //apelare metoda entertain
+//        rescuer1.entertain((Dog) dog1, activity1);
+//        System.out.println("The happiness level of " + dog1.getAnimalName() + " is: " + dog1.getHappinessLevel());
 
         //////////apelare metoda animalMood
-        dog1.animalMood();
-        cat1.animalMood();
+//        dog1.animalMood();
+//        cat1.animalMood();
 
         //first doctor
         Vet doctor1 = new Vet("Mr. Smith");
@@ -97,11 +68,11 @@ public class App
 
 
         //first game
-        Game game1 = new Game();
-        game1.setRescuerName(rescuer1);
-        game1.setAnimal(dog1);
-        game1.setVet(doctor1);
-
+//        Game game1 = new Game();
+//        game1.setRescuerName(rescuer1);
+//        game1.setAnimal(dog1);
+//        game1.setVet(doctor1);
+//
 
         }
     }
