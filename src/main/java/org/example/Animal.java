@@ -10,7 +10,7 @@ public class Animal {
     private int cleanLevel;
     private String color;
     private String gender;
-    private String favoriteFood; //string
+    private String favoriteFood;
     private String favoriteActivity;
 
     public Animal(String animalType, String animalName, int age, String color, String gender) {
@@ -19,6 +19,10 @@ public class Animal {
         this.age = age;
         this.color = color;
         this.gender = gender;
+    }
+
+    public Animal(){
+        super();
     }
 
 public void animalMood(){

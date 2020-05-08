@@ -7,6 +7,10 @@ public class Dog extends Animal {
           super(animalType, animalName, age, color, gender);
      }
 
+     public Dog(){
+          super();
+     }
+
      @Override
      public void animalMood() {
           if(getHappinessLevel()>=8 ){
